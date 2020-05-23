@@ -1,4 +1,4 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
 void Try(int i, int n, int &f, int sum, int min, int *res, int **a, bool *visited) {
