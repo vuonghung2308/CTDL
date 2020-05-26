@@ -5,7 +5,7 @@ using namespace std;
 long long valueOf(int *a) {
 	long long value = 0;
 	for(int i = 0; i < MAX; i++) 
-		value = value*10 + a[i];
+		value = (long long) value*10 + a[i];
 	return value;
 }
 
