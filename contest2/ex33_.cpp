@@ -1,3 +1,4 @@
+// lam theo web co them so bo test
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -18,10 +19,13 @@ void Try(int i, int n, bool *cot, bool *dcx, bool *dcn, int &count) {
 }
 
 int main() {
-	int n, count = 0; cin >> n;
-	bool cot[n] = {false};
-	bool duongcheox[2*n-1] = {false};
-	bool duongcheon[2*n-1] = {false};
-	Try(0, n, cot, duongcheox, duongcheon, count);
-	cout << count << endl;
+	int t; cin >> t;
+	for(int i = 0; i < t; i++) {
+		int n, count = 0; cin >> n;
+		bool cot[n] = {false};
+		bool duongcheox[2*n-1] = {false};
+		bool duongcheon[2*n-1] = {false};
+		Try(0, n, cot, duongcheox, duongcheon, count);
+		cout << count << endl;
+	}
 }

@@ -56,7 +56,7 @@ void Try(int i, int x, int y, int m, int n, string str, char **a, bool &has) {
 	}
 }
 
-void check(int m, int n, string str, char **a) {
+void check(int m, int n, string str, char **a, bool &has_) {
 	bool has = false;
 		for(int x = 0; x < m; x++) {
 			for(int y = 0; y < n; y++) {
@@ -66,13 +66,17 @@ void check(int m, int n, string str, char **a) {
 			}
 			if(has) break;
 		}
-	if(has) cout << str << ' ';
+	if(has) {
+		cout << str << ' ';
+		has_ = true;
+	}
 }
 
 int main() {
 	int t; cin >> t;
 	for(int x = 0; x < t; x++) {
 		int w, m, n;
+		bool has_ = false;
 		cin >> w >> m >> n;
 		string *str = new string[w];
 		char **a = new char*[m];
@@ -84,7 +88,8 @@ int main() {
 				cin >> a[i][j];
 		}
 		for(int i = 0; i < w; i++)
-			check(m, n, str[i], a);
+			check(m, n, str[i], a, has_);
+		if(!has_) cout << -1;
 		cout << endl;
 	}
 }

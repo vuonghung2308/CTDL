@@ -47,7 +47,7 @@ int main() {
 		string s; cin >> s;
 		bool has = false;
 		remove(s, has);
-		if(!has) cout << "-1\n";
-		else cout << endl;
+		if(!has) cout << "-1";
+		cout << endl;
 	}
 }
