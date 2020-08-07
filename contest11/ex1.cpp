@@ -1,3 +1,5 @@
+//pc2 co dau cach con web thi khong
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -15,7 +17,7 @@ void inorder(node *root) {
 	if(root == NULL)
 		return;
 	inorder(root->left);
-	cout << root->key << ' ';
+	cout << root->key;
 	inorder(root->right);
 }
 
@@ -46,7 +48,9 @@ void tree(string s) {
 int main() {
 	int t; cin >> t;
 	for(int i = 0; i < t; i++) {
-		string s; cin >> s;
+		string s ="";
+		while(s == "")
+			cin >> s;
 		tree(s); cout << endl;
 	}
 }
