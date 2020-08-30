@@ -11,16 +11,16 @@ void generateNext(int a[], int k, int n, bool &isok) {
 	while(a[i] == n+i+1-k)
 		i--;
 	if(i >= 0) {
-	int t = (i >= 0)?a[i]:0;
-	for(int j = i; j < k; j++)
-		a[j] = ++t;
+		int t = a[i];
+		for(int j = i; j < k; j++)
+			a[j] = ++t;
 	} else isok = true;
 }
 
 void show(int a[], int k) {
 	for(int i = 0; i < k; i++)
-			cout << a[i];
-		cout << ' ';
+		cout << a[i];
+	cout << ' ';
 }
 
 

@@ -8,7 +8,7 @@ int main() {
 		string s; cin >> s >> k;
 		n = s.size();
 		while(n < k) n = n * 2;
-		while(n > s.size()) {
+		while(k > s.size()) {
 			if(k > n/2) {
 				k = k - n/2;
 				if(k > 1) k = k - 1;

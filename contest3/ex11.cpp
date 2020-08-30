@@ -14,8 +14,8 @@ long long greedy(long long arr[], int n) {
         long long first = pq.top()%x; 
         pq.pop(); 
         long long second = pq.top()%x; 
-        pq.pop(); 
-  		long long t = (first + second)%x;
+    	pq.pop(); 
+		long long t = (first + second)%x;
         pq.push(t); 
         res = res + t;
 		res = res % x; 

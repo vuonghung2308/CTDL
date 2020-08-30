@@ -25,8 +25,8 @@ void generateNext(int a[], int n, bool &isok) {
 
 void show(int a[], int n) {
 	for(int i = 0; i < n; i++)
-			cout << n+1-a[i];
-		cout << ' ';
+		cout << n+1-a[i];
+	cout << ' ';
 }
 
 int main() {

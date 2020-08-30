@@ -38,7 +38,8 @@ int main() {
 			for(int j = 0; j < n; j++)
 				cin >> a[i][j];
 		}
-		Try(0, 0, n, 0, a, result, has);
+		if(a[0][0] == 1)
+			Try(0, 0, n, 0, a, result, has);
 		if(!has)
 			cout << "-1";
 		cout << endl;

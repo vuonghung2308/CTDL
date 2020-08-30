@@ -14,7 +14,8 @@ bool DFS(int s, int v, vector<vector<int> > list, bool *visited, bool *check) {
 				previous[list[s][i]] = s;
 				stack.push(s);
 				stack.push(list[s][i]);
-			} else if(previous[s] != list[s][i] 
+				break;
+			} else if(previous[s] != list[s][i]
 					&& previous[list[s][i]] != s)
 				return true;
 		}

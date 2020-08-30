@@ -23,15 +23,18 @@ void BellmanFord(int **a, int *truoc, int n, int s) {
 	bool chutrinhAm = false;
 	for(int i=0 ; i< n ; i++){ 	
 		for(int j=0 ; j< n ; j++){
-			if(d[i]>d[j]+a[j][i]) chutrinhAm=true;
+			if(d[i]>d[j]+a[j][i])
+				chutrinhAm=true;
 		}
 	}
-	if(chutrinhAm) cout << -1 << endl;
+	if(chutrinhAm) 
+		cout << -1 << endl;
 	else {
-	for(int i = 0; i < n; i++)
-		if(d[i] < SHRT_MAX/2) cout << d[i] << ' ';
-		else cout << "INFI ";
-	cout << endl;
+		for(int i = 0; i < n; i++)
+			if(d[i] < SHRT_MAX/2)
+				cout << d[i] << ' ';
+			else cout << "INFI ";
+		cout << endl;
 	}
 }
 

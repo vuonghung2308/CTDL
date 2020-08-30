@@ -13,7 +13,7 @@ long long daq(long long n, long long l, long long r) {
 		return daq(n/2, l-mid, r-mid);
 	}
 	if(l == mid) return (long long) n%2 + daq(n/2, 1, r-mid);
-	if(r == mid) return (long long) n%2 + daq(n/2, l, r-1);
+	if(r == mid) return (long long) n%2 + daq(n/2, l, mid);
 	return (long long) daq(n/2, l, mid-1) + n%2 + daq(n/2, 1, r-mid);
 	
 }
